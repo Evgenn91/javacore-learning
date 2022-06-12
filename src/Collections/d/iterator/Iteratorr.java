@@ -3,6 +3,8 @@ package Collections.d.iterator;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+
+
 public class Iteratorr {
     public static void main(String[] args) {
         ArrayList<String> list = new ArrayList<>();
