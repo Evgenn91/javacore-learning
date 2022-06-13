@@ -9,6 +9,8 @@ import java.util.ListIterator;
  * имеет методы при которыз модет идти не только с начала но и с конца списка
  */
 public class ListIteratorr {
+
+
     //будем проверять является ли наш список полиндромом(зеркальные слова) или нет
     public static void main(String[] args) {
         String s = "madam";
@@ -16,6 +18,7 @@ public class ListIteratorr {
         for(char ch: s.toCharArray()){
             list.add(ch);
         }
+
         //теперб будем идти с 2ух сторон
         //этот код неэффективный потому что они будут идти до конца противоположных сторон а не только до середины
         ListIterator<Character> iterator = list.listIterator();
@@ -33,5 +36,7 @@ public class ListIteratorr {
             System.out.println(" this is not a palendrom");
         }
 
+
     }
+
 }

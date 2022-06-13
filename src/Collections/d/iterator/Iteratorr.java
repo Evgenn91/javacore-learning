@@ -26,3 +26,5 @@ public class Iteratorr {
         System.out.println(list);
     }
 }
+
+
