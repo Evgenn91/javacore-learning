@@ -1,4 +1,4 @@
-package Collections.g.hash_structures.HashMap;
+package Collections.g.map_realizations.HashMapp;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -55,7 +55,12 @@ public class IntroduceInMap {
         //8 метод: values() - возвращает множество всех значений
         System.out.println(map1.values());
 
-        //9 метод: entrySet() - пока не разобрали
+        //9 метод: entrySet() - возвращает множество entry
+        // (entry - это интерфейс(внутренний интерфейс для мапы), который имплементируется внутренним классов
+        // мапы - Node)
+        for(Map.Entry<Integer,String> entry: map1.entrySet()){
+            System.out.println(entry.getKey() + " : " + entry.getValue());
+        }
 
 
     }
