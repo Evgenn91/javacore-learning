@@ -1,11 +1,11 @@
-package LambdaExpressions.с.predicatee;
+package LambdaExpressions.c.predicatee.and.removeif;
 
 public class Student {
-    String name;
-    char sex;
-    int age;
-    int course;
-    double grade;
+    public String name;
+    public char sex;
+    public int age;
+    public int course;
+    public double grade;
 
     public Student(String name, char sex, int age, int course, double grade) {
         this.name = name;

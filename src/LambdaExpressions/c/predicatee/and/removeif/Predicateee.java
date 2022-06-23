@@ -1,4 +1,4 @@
-package LambdaExpressions.с.predicatee;
+package LambdaExpressions.c.predicatee.and.removeif;
 
 import java.util.ArrayList;
 import java.util.function.Predicate;
@@ -7,6 +7,12 @@ import java.util.function.Predicate;
  * Поговорим об интерфейсах, которые находятся в java.util.function
  * это интерфейсы, которые можно использоваться вместо создания своих
  * 1) Predicate<T> - параметризированный интерфейс (возвращает boolean)
+ *  его единственный метод, который необходимо реализовать - это: boolean test(T t);
+ *  Predicate используется методом removeIf
+ *
+ *  Predicates можно объединить(or() и and()): predicate1.and(predicate2)
+ *                                         predicate1.or(predicate2)
+ *  можно сделать противаположную проверку существующей( negate()): predicate1.negate()
  *
  */
 
@@ -29,6 +35,16 @@ public class Predicateee {
         //старый способ фильтрации(который изучили)
         MyClassForFiltrations1 myClassForFiltrations = new MyClassForFiltrations1();
         myClassForFiltrations.testStudents(listSt, (Student s) -> { System.out.println("hello"); return s.grade > 0.8;});
+
+        myClassForFiltrations.testStudents(listSt, (Student s) -> s.grade > 0.8);
+
+        //можно объединить эти 2 предикейта!!!!!
+        Predicate<Student> p1 = (Student s) -> s.grade > 0.8;
+        Predicate<Student> p2 = (Student s) -> s.age > 20;
+        //объединение Predicates
+        myClassForFiltrations.testStudents(listSt, p1.and(p2));
+        myClassForFiltrations.testStudents(listSt, p1.or(p2));
+        myClassForFiltrations.testStudents(listSt, p1.negate());
 
 
 
