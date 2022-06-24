@@ -2,8 +2,7 @@ package Streamss.a.introduce.streams.and.methos.map;
 
 import org.omg.PortableInterceptor.ServerRequestInfo;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -48,6 +47,35 @@ public class IntroduceStreamsAndMethodMap {
         System.out.println(strList); //[one, two, twree, four, five]
         System.out.println(list22);  //[3, 3, 5, 4, 4]
 
+        System.out.println("-------------");
+        System.out.println("-------------");
 
+        //применение метода map для массива
+        int[] arr = {5,9,3,54,7};
+        //сделаем если наш элемент делится на 3 то делим, если не делится то ничего не делаем с ним
+        arr = Arrays.stream(arr).map(element ->{
+            if(element%3==0){
+                element = element/3;
+            }
+            return element;
+        }).toArray();
+        System.out.println(Arrays.toString(arr)); // [5, 3, 1, 18, 7]
+
+        System.out.println("-------------");
+        System.out.println("-------------");
+
+        //пример с Set
+        Set<String> mySet = new TreeSet<>();
+        mySet.add("one");
+        mySet.add("two");
+        mySet.add("twree");
+        mySet.add("four");
+        mySet.add("five");
+        System.out.println(mySet); //[five, four, one, two, twree]
+
+        Set<Integer> resultSet =  mySet.stream().map(element -> element.length()).collect(Collectors.toSet());
+        System.out.println(resultSet);  // [3, 4, 5] - дубликаты удалились!!!
+        List<Integer> resultList =  mySet.stream().map(element -> element.length()).collect(Collectors.toList());
+        System.out.println(resultList); // [4, 4, 3, 3, 5]
     }
 }

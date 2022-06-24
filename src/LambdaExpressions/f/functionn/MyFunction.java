@@ -5,7 +5,6 @@ import LambdaExpressions.c.predicatee.and.removeif.Student;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
-import java.util.function.Predicate;
 
 /**
  *  Function<T,R> - следующий интерфейс из java.util.function
