@@ -16,16 +16,16 @@ public class b_MovingElementToEnd {
         int[] array = {5,1,3,4,0,8,9,7,6,2};
 
         //5-ка окажется в конце
-        System.out.println("Перед гонением: "+Arrays.toString(array));
+        System.out.println("Перед гонением: "+Arrays.toString(array));//[5, 1, 3, 4, 0, 8, 9, 7, 6, 2]
         gonimElemVKonec(array);
-        System.out.println("После гонения в конец: "+ Arrays.toString(array));
+        System.out.println("После гонения в конец: "+ Arrays.toString(array));//[1, 3, 4, 0, 8, 9, 7, 6, 2, 5]
 
         System.out.println("===========================" );
 
         //5-ка окажется опять в начале
-        System.out.println("Перед гонением: "+Arrays.toString(array));
+        System.out.println("Перед гонением: "+Arrays.toString(array));//[1, 3, 4, 0, 8, 9, 7, 6, 2, 5]
         gonimElemVNachalo(array);
-        System.out.println("После гонения в начало: "+Arrays.toString(array));
+        System.out.println("После гонения в начало: "+Arrays.toString(array));//[5, 1, 3, 4, 0, 8, 9, 7, 6, 2]
 
     }
 

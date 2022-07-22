@@ -18,16 +18,23 @@ public class c_MovingLargestElementToEnd {
         int[] array = {5,1,3,4,0,8,9,7,6,2};
 
         //9-ка окажется в конце
-        System.out.println("Перед гонением: "+ Arrays.toString(array));
+        System.out.println("Перед гонением: "+ Arrays.toString(array));//[5, 1, 3, 4, 0, 8, 9, 7, 6, 2]
+
         gonimNaibElemVKonec(array);
-        System.out.println("После гонения в конец наибольшего: "+Arrays.toString(array));
+        //если этот метод вызвать столько раз сколько элементов в массиве - то отсортируется весь массив!!!!(это зачатки пузырьковой сортировки(неоптимизированной))
+        //т.е. так:
+//        for(int i = 0; i < array.length-1; i++){
+//            gonimNaibElemVKonec(array);
+//        }
+
+        System.out.println("После гонения в конец наибольшего: "+Arrays.toString(array));//[1, 3, 4, 0, 5, 8, 7, 6, 2, 9]
 
         System.out.println("===========================" );
 
         //1-ца окажется в начале
-        System.out.println("Перед гонением: "+Arrays.toString(array));
+        System.out.println("Перед гонением: "+Arrays.toString(array));//[1, 3, 4, 0, 5, 8, 7, 6, 2, 9]
         gonimNaimElemVNachalo(array);
-        System.out.println("После гонения в начало наименьшего: "+Arrays.toString(array));
+        System.out.println("После гонения в начало наименьшего: "+Arrays.toString(array));//[0, 1, 3, 4, 2, 5, 8, 7, 6, 9]
 
     }
 

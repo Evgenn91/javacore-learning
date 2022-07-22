@@ -1,10 +1,10 @@
-package Algorithms.b.algorithm1.inverting.array;
+package Algorithms.b.inverting.array;
 
 import java.util.Arrays;
 
 /**
  * Алгоритм инвертирования массива циклом и рекурсией
- * Идея: в циклу проходим до середины массива и каждое значение меняем
+ * Идея: циклом проходим до середины массива и каждое значение меняем
  * со значением "зеркально расположенним" этому, во второй половине массива
  *
  * Тоесть: 1ое меняем с последним, 2ое с предпоследним и т. д. до середины массива
@@ -15,9 +15,9 @@ public class InvertingArray {
         int[] array = {1,2,3,4,5,6,7,8,9,10};
 
 
-        System.out.println("Перед инвертированием с помошью цикла: "+ Arrays.toString(array));
+        System.out.println("Перед инвертированием с помошью цикла: "+ Arrays.toString(array));//[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         invertCikl(array);
-        System.out.println("После инвертирования с помошью цикла: "+Arrays.toString(array));
+        System.out.println("После инвертирования с помошью цикла: "+Arrays.toString(array));//[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
 
         System.out.println("===========================" );
 
@@ -25,17 +25,17 @@ public class InvertingArray {
         //здесь разница в том что помимо самого массива, нам необходимо еще передать индекс элемента в массиве
         //а раз у нас идея этой рекурсии в том, что мы просто идем до середины вызывая постоянно сами себя(я про метод)
         //то передаем индекс первого элемента(а в самой рекурсии метода мы инкрементируем это значение)
-        System.out.println("Перед инвертированием с помошью рекурсии: "+ Arrays.toString(array));
+        System.out.println("Перед инвертированием с помошью рекурсии: "+ Arrays.toString(array));//[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
         invertRek(array, 0);
-        System.out.println("После инвертирования с помошью рекурсии: "+Arrays.toString(array));
+        System.out.println("После инвертирования с помошью рекурсии: "+Arrays.toString(array));//[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
         System.out.println("===========================" );
 
 
         String str = "Строка для инвертирования";
-        System.out.println("Перед инвертированием строки: "+ str);
+        System.out.println("Перед инвертированием строки: "+ str);//Строка для инвертирования
         String invertStr = invertCiklString(str);
-        System.out.println("После инвертирования строки: "+ invertStr);
+        System.out.println("После инвертирования строки: "+ invertStr);//яинаворитревни ялд акортС
 
     }
 

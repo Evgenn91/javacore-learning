@@ -5,7 +5,7 @@ import LambdaExpressions.c.predicatee.and.removeif.Student;
 import java.util.ArrayList;
 
 /**
- * метод limit() - будет пропускать(тоесть отбрасывать от результата) первый n элементов нашего стрима
+ * метод skip() - будет пропускать(тоесть отбрасывать от результата) первый n элементов нашего стрима
  *         (i)
  */
 public class IntroduceSkip {
