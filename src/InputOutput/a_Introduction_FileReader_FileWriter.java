@@ -1,16 +1,17 @@
 package InputOutput;
 
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
 /**
  * Stream для работы с файлами - упорядоченная последовательность данных
  * Файлы могут быть:
- *    - читабельные для человека ( text files )
- *    - нечитабельные для человека ( binary files )
+ *    - читабельные для человека ( text files ) - FileReader, FileWriter (текстовый файл)
+ *    - нечитабельные для человека ( binary files ) - FileInputStream, FileOutputStream (бинарный файл)
  * При работе с разными файлами используются разные стримы
  */
-public class Introduction {
+public class a_Introduction_FileReader_FileWriter {
     public static void main(String[] args) throws IOException {
         //Streams для работы с текстовыми файлами(FileReader and FileWriter)
         String rubai ="text text text text text text text\n" +
@@ -44,7 +45,20 @@ public class Introduction {
         //====================================================================================================================
         //====================================================================================================================
 
-        //2) FileReader(read this text from file1.txt)
-        //dsd
+        //2) FileReader(read text from file1.txt)
+        FileReader reader = null;
+        try {
+            reader = new FileReader("путь к существуюшему файлу");
+            int character;
+            while((character = reader.read()) != 1) {     //чтение идет посимвольно(если возвращает -1 то значит конец файла)
+                System.out.print((char) character);
+            }
+            System.out.println();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            reader.close();
+        }
+
     }
 }
