@@ -13,7 +13,7 @@ public class f_DataInputStream_DataOutputStream {
             while ((i = inputStream.read()) != 1){
                 outputStream.write(i);
             }
-            //выды write
+            //виды write
 //            outputStream.writeBoolean(true);
 //            outputStream.writeByte(1);
 //            outputStream.writeShort(3);
