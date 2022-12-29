@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * запись и чтение объектов(используется с сериализацией)
  */
-public class j_ObjectInputStream_ObjectOutputStream {
+public class h_ObjectInputStream_ObjectOutputStream {
     public static void main(String[] args) {
         //пример с объектом String
         List<String> names = new ArrayList<>();
